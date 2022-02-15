@@ -1,0 +1,37 @@
+package assignments.group1;
+
+import java.util.Scanner;
+
+import assignments.group2.Q3Prime13;
+
+public class Q_5_PrintPrime {
+		
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Limit...");
+		int Limit = sc.nextInt();
+		
+		Q_5_PrintPrime qp = new Q_5_PrintPrime();
+		qp.printprime(Limit);
+		
+		
+		
+		
+	}
+
+	private void printprime(int limit) {
+		if(limit>=1) {
+			System.out.println("2 is prime number");
+		}
+		for (int i = 3; i < limit; i++) {
+			Q3Prime13 iP = new Q3Prime13();
+			iP.isPrime(i);		
+			
+		}
+		
+		
+		
+	}
+
+}

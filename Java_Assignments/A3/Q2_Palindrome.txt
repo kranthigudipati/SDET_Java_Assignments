@@ -1,0 +1,32 @@
+package assignments.group3;
+
+public class Q2_Palindrome {
+/*
+ * Write a program to check if a given string is a palindrome or not.
+Palindrome example: trurt
+ */
+	public static void main(String[] args) {
+		
+		String s  = "trurt";
+		Q2_Palindrome p = new Q2_Palindrome();
+		p.isPalindrome(s);
+		p.isPalindrome("Chakri");
+		
+	}
+
+	private void isPalindrome(String s) {
+		
+		String rev = "";
+				
+		for (int i = s.length()-1; i >=0 ; i--) {
+			rev = rev + s.charAt(i);
+		}
+		
+		if (s.equals(rev)) {
+			System.out.println("Is Palindrome");
+		}else {
+			System.out.println("Not Palindrome");
+		}
+	}
+
+}

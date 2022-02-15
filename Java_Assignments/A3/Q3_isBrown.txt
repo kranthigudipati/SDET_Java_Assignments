@@ -1,0 +1,38 @@
+package assignments.group3;
+
+public class Q3_isBrown {
+	/*
+	 * Write a program to check “brown” is present in the string: A brown fox
+ran away fast
+	 */
+
+	public static void main(String[] args) {
+		String fromText = "A brown fox ran away fast" ;
+		Q3_isBrown iT = new Q3_isBrown();
+		iT.getText(fromText,"Brown");
+		iT.getText(fromText,"Bexteno");
+		iT.getText(fromText,"brown");
+		iT.getText(fromText,"ran");
+
+	}
+
+	private void getText(String string, String isText) {
+		
+		String givenText = string;
+		String findText = isText;
+		int count=0;
+		String[] split = givenText.split(" ");
+		for (String splitString : split) {
+			if(splitString.equals(findText)) {
+				System.out.println(findText + " is present in the given string \""+ givenText+"\"");
+				count++;
+				break;
+			}
+		}
+		if(count==0) {
+			System.out.println(findText + " is not present in the given string \"" + givenText +"\"" );
+		}
+	}
+
+}
+© 2022 GitHub, Inc.

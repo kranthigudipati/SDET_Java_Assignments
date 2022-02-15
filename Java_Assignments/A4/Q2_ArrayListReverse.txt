@@ -1,0 +1,35 @@
+package assignments.group4;
+
+import java.util.ArrayList;
+
+public class Q2_ArrayListReverse {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> arrayList = new ArrayList<String>();
+		arrayList.add("Raghu");
+		arrayList.add("Shyam");
+		arrayList.add("Rama");
+		arrayList.add("SriRam");
+		Q2_ArrayListReverse arrayrev = new Q2_ArrayListReverse();
+		arrayrev.ReverseArrayList(arrayList);
+		System.out.println("Before Reversing");
+		for (String string : arrayList) {
+			System.out.println(string);
+		}
+		
+	}
+
+	private void ReverseArrayList(ArrayList<String> arrayList) {
+		
+		ArrayList<String> revArrayList = new ArrayList<String>();
+		for (int i = arrayList.size() - 1; i >= 0; i--) {
+            revArrayList.add(arrayList.get(i));
+        }
+		System.out.println("Post Reversal");
+        for (String string : revArrayList) {
+			System.out.println(string);
+		}
+	}
+
+}
